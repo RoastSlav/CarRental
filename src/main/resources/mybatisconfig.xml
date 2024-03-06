@@ -11,8 +11,4 @@
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
-    <typeAliases>
-        <package name="com.infinno.timetrack.model"/>
-        <package name="com.infinno.timetrack.dtos"/>
-    </typeAliases>
 </configuration>

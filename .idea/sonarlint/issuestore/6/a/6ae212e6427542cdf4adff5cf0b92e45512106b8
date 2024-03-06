@@ -1,7 +1,5 @@
 
-Y
-java:S1854"<Remove this useless assignment to local variable "contexto".(‡…Áî8¶Æ¡«á1
-J
-java:S1481"-Remove this unused "contexto" local variable.(‡…Áî8¸Æ¡«á1
+
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½ş½á8¨¢â«á1
 W
-java:S1128"5Remove this unused import 'com.sun.tools.javac.Main'.( ƒ™şüÿÿÿÿ8è–³«á1
+java:S1128"5Remove this unused import 'com.sun.tools.javac.Main'.( ƒ™şüÿÿÿÿ8‘›à«á1

@@ -1,0 +1,7 @@
+
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8†¨ä«á1
+I
+java:S1948",Make "carService" transient or serializable.(üÆà°8†¨ä«á1
+P
+java:S14814".Remove this unused "colorById" local variable.(ûßÊëøÿÿÿÿ8Š¨ä«á1
