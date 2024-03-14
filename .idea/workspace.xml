@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6899a7-e9ba-4331-8f24-7cf646841922" name="Changes" comment="set up">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Rate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/panels/CarsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/panels/DashboardPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/panels/LocationsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/panels/PaymentsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/panels/RatesPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/panels/RolesPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/panels/UserPanel.java" afterDir="false" />
+    <list default="true" id="1b6899a7-e9ba-4331-8f24-7cf646841922" name="Changes" comment="Added the panels for the interface and the models">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarMakeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarModelRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/LocationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/RateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/RentalRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/StateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e97d4c6a113c8cc1128284ee93e57de4ecca5a6a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e97d4c6a113c8cc1128284ee93e57de4ecca5a6a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/views/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/views/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarColorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarColorRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -95,7 +98,7 @@
       <workItem from="1709758393644" duration="547000" />
       <workItem from="1710164899675" duration="22000" />
       <workItem from="1710320944042" duration="360000" />
-      <workItem from="1710416714374" duration="1044000" />
+      <workItem from="1710416714374" duration="3184000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -113,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710416928298</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added the panels for the interface and the models">
+      <option name="closed" value="true" />
+      <created>1710418048540</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710418048540</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +144,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up" />
+    <MESSAGE value="Added the panels for the interface and the models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the panels for the interface and the models" />
   </component>
 </project>
