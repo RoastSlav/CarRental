@@ -1,16 +1,9 @@
 package org.rostislav.views;
 
-import org.rostislav.models.CarColor;
-import org.rostislav.service.CarService;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class Dashboard extends JFrame {
-    @Autowired
-    private CarService carService;
-
     private final CardLayout cardLayout = new CardLayout();
     private final JPanel cardsPanel = new JPanel(cardLayout);
 
@@ -26,46 +19,49 @@ public class Dashboard extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
 
-        // Optionally, add a welcome label or other elements here
+        // Welcome label
+        JLabel welcomeLabel = new JLabel("<html><h1>Welcome to the Car Rental System</h1></html>", SwingConstants.CENTER);
+        add(welcomeLabel, BorderLayout.NORTH);
 
-        // Prepare the cards panel with CardLayout
-        cardsPanel.add(new JLabel("<html><h1>Welcome to the Car Rental System</h1></html>"), "WELCOME");
-        // Placeholder panels for different sections
-        cardsPanel.add(new JLabel("Users Management Section"), "USERS");
-        cardsPanel.add(new JLabel("Cars Management Section"), "CARS");
-        cardsPanel.add(new JLabel("Rentals Management Section"), "RENTALS");
-        cardsPanel.add(new JLabel("Locations Management Section"), "LOCATIONS");
-        // Add more cards for other sections as needed
+        // Initialize cards panel with CardLayout for different sections
+        cardsPanel.setLayout(new CardLayout());
 
-        add(cardsPanel, BorderLayout.CENTER); // Add the cards panel to the frame
+        // Combined placeholders for sections
+        cardsPanel.add(createPlaceholderPanel("Welcome to the Car Rental System Dashboard. Please select a section."), "WELCOME");
+        cardsPanel.add(createPlaceholderPanel("Manage Users"), "USERS");
+        cardsPanel.add(createPlaceholderPanel("Manage Cars & Rentals"), "CARS_RENTALS");
+        cardsPanel.add(createPlaceholderPanel("Manage Locations"), "LOCATIONS");
+        cardsPanel.add(createPlaceholderPanel("Manage Rates"), "RATES");
+        cardsPanel.add(createPlaceholderPanel("Manage Payments"), "PAYMENTS");
+        cardsPanel.add(createPlaceholderPanel("Manage Roles"), "ROLES");
+
+        add(cardsPanel, BorderLayout.CENTER);
+    }
+
+    private JPanel createPlaceholderPanel(String text) {
+        JPanel panel = new JPanel(new BorderLayout());
+        JLabel label = new JLabel(text, SwingConstants.CENTER);
+        panel.add(label);
+        return panel;
     }
 
     private void initNavigation() {
-        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 10, 10)); // Adjust as needed
+        JPanel buttonPanel = new JPanel(new GridLayout(1, 5, 10, 10)); // Adjust as needed for the number of buttons
 
-        // Navigation buttons
-        JButton usersButton = new JButton("Users");
-        usersButton.addActionListener(e -> cardLayout.show(cardsPanel, "USERS"));
+        // Initialize and add buttons for navigation
+        buttonPanel.add(createNavButton("Users", "USERS"));
+        buttonPanel.add(createNavButton("Cars & Rentals", "CARS_RENTALS"));
+        buttonPanel.add(createNavButton("Locations", "LOCATIONS"));
+        buttonPanel.add(createNavButton("Rates", "RATES"));
+        buttonPanel.add(createNavButton("Payments", "PAYMENTS"));
+        buttonPanel.add(createNavButton("Roles", "ROLES"));
 
-        JButton carsButton = new JButton("Cars");
-        carsButton.addActionListener(e -> {
-            CarColor colorById = carService.getColorById(1);
-            cardLayout.show(cardsPanel, "CARS");
-        });
+        add(buttonPanel, BorderLayout.SOUTH);
+    }
 
-        JButton rentalsButton = new JButton("Rentals");
-        rentalsButton.addActionListener(e -> cardLayout.show(cardsPanel, "RENTALS"));
-
-        JButton locationsButton = new JButton("Locations");
-        locationsButton.addActionListener(e -> cardLayout.show(cardsPanel, "LOCATIONS"));
-
-        // Add buttons to the panel
-        buttonPanel.add(usersButton);
-        buttonPanel.add(carsButton);
-        buttonPanel.add(rentalsButton);
-        buttonPanel.add(locationsButton);
-        // Add more buttons for other sections as needed
-
-        add(buttonPanel, BorderLayout.NORTH); // Add the button panel to the top of the frame
+    private JButton createNavButton(String label, String card) {
+        JButton button = new JButton(label);
+        button.addActionListener(e -> ((CardLayout) cardsPanel.getLayout()).show(cardsPanel, card));
+        return button;
     }
 }
