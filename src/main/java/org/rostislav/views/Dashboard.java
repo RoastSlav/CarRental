@@ -1,5 +1,7 @@
 package org.rostislav.views;
 
+import panels.*;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -20,29 +22,22 @@ public class Dashboard extends JFrame {
         setLayout(new BorderLayout(10, 10));
 
         // Welcome label
-        JLabel welcomeLabel = new JLabel("<html><h1>Welcome to the Car Rental System</h1></html>", SwingConstants.CENTER);
+        JLabel welcomeLabel = new JLabel("<html><h1>Car Rental System</h1></html>", SwingConstants.CENTER);
         add(welcomeLabel, BorderLayout.NORTH);
 
         // Initialize cards panel with CardLayout for different sections
         cardsPanel.setLayout(new CardLayout());
 
         // Combined placeholders for sections
-        cardsPanel.add(createPlaceholderPanel("Welcome to the Car Rental System Dashboard. Please select a section."), "WELCOME");
-        cardsPanel.add(createPlaceholderPanel("Manage Users"), "USERS");
-        cardsPanel.add(createPlaceholderPanel("Manage Cars & Rentals"), "CARS_RENTALS");
-        cardsPanel.add(createPlaceholderPanel("Manage Locations"), "LOCATIONS");
-        cardsPanel.add(createPlaceholderPanel("Manage Rates"), "RATES");
-        cardsPanel.add(createPlaceholderPanel("Manage Payments"), "PAYMENTS");
-        cardsPanel.add(createPlaceholderPanel("Manage Roles"), "ROLES");
+        cardsPanel.add(new DashboardPanel(), "WELCOME");
+        cardsPanel.add(new UserPanel(), "USERS");
+        cardsPanel.add(new CarsPanel(), "CARS_RENTALS");
+        cardsPanel.add(new LocationsPanel(), "LOCATIONS");
+        cardsPanel.add(new RatesPanel(), "RATES");
+        cardsPanel.add(new PaymentsPanel(), "PAYMENTS");
+        cardsPanel.add(new RolesPanel(), "ROLES");
 
         add(cardsPanel, BorderLayout.CENTER);
-    }
-
-    private JPanel createPlaceholderPanel(String text) {
-        JPanel panel = new JPanel(new BorderLayout());
-        JLabel label = new JLabel(text, SwingConstants.CENTER);
-        panel.add(label);
-        return panel;
     }
 
     private void initNavigation() {
