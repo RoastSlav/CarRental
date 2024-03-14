@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6899a7-e9ba-4331-8f24-7cf646841922" name="Changes" comment="Added the panels for the interface and the models">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarMakeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarModelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/LocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/PaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/RateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/RentalRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/StateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e97d4c6a113c8cc1128284ee93e57de4ecca5a6a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e97d4c6a113c8cc1128284ee93e57de4ecca5a6a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    <list default="true" id="1b6899a7-e9ba-4331-8f24-7cf646841922" name="Changes" comment="Added repositories for the tables and a missing model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarColorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarColorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarMake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarMake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/CarService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +87,7 @@
       <workItem from="1709758393644" duration="547000" />
       <workItem from="1710164899675" duration="22000" />
       <workItem from="1710320944042" duration="360000" />
-      <workItem from="1710416714374" duration="3184000" />
+      <workItem from="1710416714374" duration="4479000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -124,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710418048540</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added repositories for the tables and a missing model">
+      <option name="closed" value="true" />
+      <created>1710427027148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710427027148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +142,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="set up" />
     <MESSAGE value="Added the panels for the interface and the models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the panels for the interface and the models" />
+    <MESSAGE value="Added repositories for the tables and a missing model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added repositories for the tables and a missing model" />
   </component>
 </project>

@@ -7,6 +7,16 @@ public class Car {
     private int colorId;
     private String licensePlate;
     private String status;
+    private int locationId;
+
+    public Car(String model, int year, int colorId, String licensePlate, String status, int locationId) {
+        this.model = model;
+        this.year = year;
+        this.colorId = colorId;
+        this.licensePlate = licensePlate;
+        this.status = status;
+        this.locationId = locationId;
+    }
 
     public int getId() {
         return id;
@@ -54,5 +64,13 @@ public class Car {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
     }
 }

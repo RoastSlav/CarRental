@@ -21,4 +21,7 @@ public interface RentalRepository {
 
     @Delete("DELETE FROM rentals WHERE id = #{id}")
     void deleteRental(int id);
+
+    @Update("UPDATE rentals SET status=#{status} WHERE id=#{id}")
+    void updateRentalStatus(int id, String status);
 }

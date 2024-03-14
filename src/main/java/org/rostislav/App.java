@@ -1,6 +1,5 @@
 package org.rostislav;
 
-import com.sun.tools.javac.Main;
 import org.mybatis.spring.annotation.MapperScan;
 import org.rostislav.views.Dashboard;
 import org.springframework.boot.Banner;
@@ -16,6 +15,7 @@ import javax.swing.*;
 @MapperScan("org.rostislav.repository")
 public class App implements CommandLineRunner {
     static ApplicationContext context;
+
     public static void main(String[] args) {
         context = new SpringApplicationBuilder(App.class)
                 .web(WebApplicationType.NONE)

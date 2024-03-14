@@ -7,6 +7,13 @@ public class Location {
     private int cityId;
     private String zipCode;
 
+    public Location(String name, String address, int cityId, String zipCode) {
+        this.name = name;
+        this.address = address;
+        this.cityId = cityId;
+        this.zipCode = zipCode;
+    }
+
     public int getId() {
         return id;
     }

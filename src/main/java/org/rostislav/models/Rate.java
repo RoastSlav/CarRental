@@ -9,6 +9,13 @@ public class Rate {
     private BigDecimal monthlyRate;
     private BigDecimal extraFees;
 
+    public Rate(BigDecimal dailyRate, BigDecimal weeklyRate, BigDecimal monthlyRate, BigDecimal extraFees) {
+        this.dailyRate = dailyRate;
+        this.weeklyRate = weeklyRate;
+        this.monthlyRate = monthlyRate;
+        this.extraFees = extraFees;
+    }
+
     public int getId() {
         return id;
     }

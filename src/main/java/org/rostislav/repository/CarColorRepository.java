@@ -4,7 +4,6 @@ import org.apache.ibatis.annotations.*;
 import org.rostislav.models.CarColor;
 
 import java.util.Collection;
-import java.util.List;
 
 @Mapper
 public interface CarColorRepository {

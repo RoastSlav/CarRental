@@ -8,6 +8,14 @@ public class User {
     private String licenseNumber;
     private int roleId;
 
+    public User(String email, String password, String phone, String licenseNumber, int roleId) {
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.licenseNumber = licenseNumber;
+        this.roleId = roleId;
+    }
+
     public int getId() {
         return id;
     }

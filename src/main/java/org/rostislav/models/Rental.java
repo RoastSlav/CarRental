@@ -12,6 +12,25 @@ public class Rental {
     private BigDecimal totalPrice;
     private String status;
 
+    public Rental(int id, int userId, int carId, LocalDate pickupDate, LocalDate dropoffDate, BigDecimal totalPrice, String status) {
+        this.id = id;
+        this.userId = userId;
+        this.carId = carId;
+        this.pickupDate = pickupDate;
+        this.dropoffDate = dropoffDate;
+        this.totalPrice = totalPrice;
+        this.status = status;
+    }
+
+    public Rental(int userId, int carId, LocalDate pickupDate, LocalDate dropoffDate, BigDecimal totalPrice, String status) {
+        this.userId = userId;
+        this.carId = carId;
+        this.pickupDate = pickupDate;
+        this.dropoffDate = dropoffDate;
+        this.totalPrice = totalPrice;
+        this.status = status;
+    }
+
     public int getId() {
         return id;
     }

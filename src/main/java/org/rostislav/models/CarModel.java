@@ -5,6 +5,11 @@ public class CarModel {
     private String modelName;
     private int makeId;
 
+    public CarModel(String modelName, int makeId) {
+        this.modelName = modelName;
+        this.makeId = makeId;
+    }
+
     public int getId() {
         return id;
     }

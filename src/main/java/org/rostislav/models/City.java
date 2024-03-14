@@ -5,6 +5,11 @@ public class City {
     private String cityName;
     private int stateId;
 
+    public City(String cityName, int stateId) {
+        this.cityName = cityName;
+        this.stateId = stateId;
+    }
+
     public int getId() {
         return id;
     }
