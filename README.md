@@ -1,0 +1,1 @@
+CarRental is a comprehensive relational database project developed for a university Databases course. This system is designed to manage all aspects of a car rental service, including vehicle management, customer relations, and rental transactions. The project demonstrates the practical application of SQL and relational database design principles.
