@@ -1,5 +1,6 @@
 package org.rostislav.views;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import panels.*;
 
 import javax.swing.*;
@@ -9,7 +10,12 @@ public class Dashboard extends JFrame {
     private final CardLayout cardLayout = new CardLayout();
     private final JPanel cardsPanel = new JPanel(cardLayout);
 
-    public Dashboard() {
+    CarsPanel carsPanel;
+
+    @Autowired
+    public Dashboard(CarsPanel carsPanel) {
+        this.carsPanel = carsPanel;
+
         initUI();
         initNavigation();
     }
@@ -31,7 +37,7 @@ public class Dashboard extends JFrame {
         // Combined placeholders for sections
         cardsPanel.add(new DashboardPanel(), "WELCOME");
         cardsPanel.add(new UserPanel(), "USERS");
-        cardsPanel.add(new CarsPanel(), "CARS_RENTALS");
+        cardsPanel.add(carsPanel, "CARS_RENTALS");
         cardsPanel.add(new LocationsPanel(), "LOCATIONS");
         cardsPanel.add(new RatesPanel(), "RATES");
         cardsPanel.add(new PaymentsPanel(), "PAYMENTS");

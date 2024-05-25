@@ -2,15 +2,18 @@ package org.rostislav.models;
 
 public class Car {
     private int id;
-    private String model;
+    private int modelId;
     private int year;
     private int colorId;
     private String licensePlate;
     private String status;
     private int locationId;
 
-    public Car(String model, int year, int colorId, String licensePlate, String status, int locationId) {
-        this.model = model;
+    public Car() {
+    }
+
+    public Car(int modelId, int year, int colorId, String licensePlate, String status, int locationId) {
+        this.modelId = modelId;
         this.year = year;
         this.colorId = colorId;
         this.licensePlate = licensePlate;
@@ -26,12 +29,12 @@ public class Car {
         this.id = id;
     }
 
-    public String getModel() {
-        return model;
+    public int getModelId() {
+        return modelId;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setModelId(int model) {
+        this.modelId = model;
     }
 
     public int getYear() {
@@ -72,5 +75,10 @@ public class Car {
 
     public void setLocationId(int locationId) {
         this.locationId = locationId;
+    }
+
+    @Override
+    public String toString() {
+        return id + " - " + licensePlate + " - " + status;
     }
 }

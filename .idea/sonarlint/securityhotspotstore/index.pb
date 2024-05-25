@@ -57,8 +57,6 @@ i
 9src/main/java/org/rostislav/repository/CarRepository.java,3\9\39d041fd296cac86e68aa61deef34977a286dbba
 j
 :src/main/java/org/rostislav/repository/UserRepository.java,9\a\9a77782bdc24070b70311a529eae713cfad36868
-m
-=src/main/java/org/rostislav/repository/RentalsRepository.java,1\c\1c08dd6e98ca9df11bbcd71214421ee2f431b0fe
 l
 <src/main/java/org/rostislav/repository/RentalRepository.java,f\4\f42eaacec3cf944c99680e5d96dc50e5b779e7fe
 k
@@ -79,3 +77,13 @@ j
 :src/main/java/org/rostislav/repository/CityRepository.java,8\8\882be49f226e5e1bf644885a4ebdfa20ab01e5c8
 j
 :src/main/java/org/rostislav/repository/RoleRepository.java,0\2\02ff2abf1ce086ae0ecb6f812dcbf30c314be445
+h
+8src/main/java/org/rostislav/service/LocationService.java,7\2\721e6b66576147d38719dc0fa024a53bd00072d2
+d
+4src/main/java/org/rostislav/service/UserService.java,d\6\d6afc4b7da0d36726d940ee7720a39d88a162825
+g
+7src/main/java/org/rostislav/service/PaymentService.java,5\5\55187518fa9ea6f7ca6bbee00a989838295e3746
+f
+6src/main/java/org/rostislav/service/RentalService.java,9\1\91206525c58c2e4ee26109fd7192bb0400c58620
+w
+G.idea/sonarlint/issuestore/e/9/e97d4c6a113c8cc1128284ee93e57de4ecca5a6a,2\1\21f4e85deb3b236e569f98b8c297edbed800a3a3

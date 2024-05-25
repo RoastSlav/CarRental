@@ -86,8 +86,12 @@ public class CarService {
         return carModelRepository.getAllCarModels();
     }
 
-    public void addCar(String model, int year, int colorId, String licensePlate, String status, int locationId) {
-        carRepository.addCar(new Car(model, year, colorId, licensePlate, status, locationId));
+    public void addCar(int modelId, int year, int colorId, String licensePlate, String status, int locationId) {
+        carRepository.addCar(new Car(modelId, year, colorId, licensePlate, status, locationId));
+    }
+
+    public void addCar(Car car) {
+        carRepository.addCar(car);
     }
 
     public void removeCar(int id) {
