@@ -60,10 +60,8 @@ public class UsersPanel extends JPanel implements NavigablePanel {
         buttonsPanel.add(backButton);
         add(buttonsPanel, BorderLayout.SOUTH);
 
-        // Load users into the table
         loadUsers();
 
-        // Button listeners
         addButton.addActionListener(e -> addUser());
         editButton.addActionListener(e -> editUser(table));
         deleteButton.addActionListener(e -> deleteUser(table));
@@ -71,7 +69,7 @@ public class UsersPanel extends JPanel implements NavigablePanel {
     }
 
     private void loadUsers() {
-        tableModel.setRowCount(0); // Clear existing rows
+        tableModel.setRowCount(0);
         Collection<User> users = userService.getAllUsers();
         for (User user : users) {
             String roleName = roleService.getRoleNameById(user.getRoleId());

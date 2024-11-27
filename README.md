@@ -48,6 +48,7 @@ SQL.
 *
 
 *
+
 Vehicle
 Management:
 **
@@ -68,6 +69,7 @@ deletions.
 *
 
 *
+
 Customer
 Management:
 **
@@ -83,6 +85,7 @@ histories.
 *
 
 *
+
 Transaction
 Processing:
 **
@@ -103,6 +106,7 @@ integrity.
 Java
 -
 SQL
+
 - [Database Management System Name, e.g., MySQL, PostgreSQL]
 
 - ## Repository Structure

@@ -34,14 +34,12 @@ public class CarMakesPanel extends JPanel implements NavigablePanel {
         title.setFont(new Font("Arial", Font.BOLD, 24));
         add(title, BorderLayout.NORTH);
 
-        // Create a table to display car makes
         String[] columns = {"ID", "Make Name"};
         tableModel = new DefaultTableModel(columns, 0);
         JTable table = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
 
-        // Buttons for CRUD operations
         JPanel buttonsPanel = new JPanel();
         JButton addButton = new JButton("Add Make");
         JButton editButton = new JButton("Edit Make");
@@ -54,10 +52,8 @@ public class CarMakesPanel extends JPanel implements NavigablePanel {
         buttonsPanel.add(backButton);
         add(buttonsPanel, BorderLayout.SOUTH);
 
-        // Load car makes into the table
         loadCarMakes();
 
-        // Button listeners
         addButton.addActionListener(e -> addCarMake());
         editButton.addActionListener(e -> editCarMake(table));
         deleteButton.addActionListener(e -> deleteCarMake(table));
@@ -65,7 +61,7 @@ public class CarMakesPanel extends JPanel implements NavigablePanel {
     }
 
     private void loadCarMakes() {
-        tableModel.setRowCount(0); // Clear existing rows
+        tableModel.setRowCount(0);
         Collection<CarMake> carMakes = carMakeService.getAllCarMakes();
         for (CarMake carMake : carMakes) {
             tableModel.addRow(new Object[] {carMake.getId(), carMake.getMakeName()});

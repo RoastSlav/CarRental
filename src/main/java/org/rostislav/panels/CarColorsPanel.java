@@ -35,18 +35,15 @@ public class CarColorsPanel extends JPanel implements NavigablePanel {
         title.setFont(new Font("Arial", Font.BOLD, 24));
         add(title, BorderLayout.NORTH);
 
-        // Table for car colors
         String[] columns = {"ID", "Color Name"};
         tableModel = new DefaultTableModel(columns, 0);
         JTable table = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
 
-        // Buttons for CRUD
         JPanel buttonsPanel = createButtonsPanel(table, navigationController);
         add(buttonsPanel, BorderLayout.SOUTH);
 
-        // Load colors into the table
         loadColors();
     }
 
@@ -73,7 +70,7 @@ public class CarColorsPanel extends JPanel implements NavigablePanel {
     }
 
     private void loadColors() {
-        tableModel.setRowCount(0); // Clear the table
+        tableModel.setRowCount(0);
         Collection<CarColor> colors = carColorService.getAllColors();
         for (CarColor color : colors) {
             tableModel.addRow(new Object[] {color.getId(), color.getColorName()});

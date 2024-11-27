@@ -30,13 +30,11 @@ public class MainWindow extends JFrame {
         setLayout(new BorderLayout());
         add(mainPanel, BorderLayout.CENTER);
 
-        // Register all panels
         for (NavigablePanel panel : navigablePanels) {
             panels.put(panel.getPanelName(), panel.getPanel());
             mainPanel.add(panel.getPanel(), panel.getPanelName());
         }
 
-        // Show the Dashboard by default
         switchToPanel("Dashboard");
         setLocationRelativeTo(null);
     }

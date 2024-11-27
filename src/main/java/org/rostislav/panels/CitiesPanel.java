@@ -53,7 +53,7 @@ public class CitiesPanel extends JPanel implements NavigablePanel {
         tableModel = new DefaultTableModel(new Object[] {"ID", "City Name", "State ID", "State Name"}, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                return column != 0; // ID is not editable
+                return column != 0;
             }
         };
         citiesTable = new JTable(tableModel);
@@ -86,7 +86,7 @@ public class CitiesPanel extends JPanel implements NavigablePanel {
     }
 
     private void loadCities() {
-        tableModel.setRowCount(0); // Clear the table
+        tableModel.setRowCount(0);
         Collection<CityWithState> cities = cityService.getAllCitiesWithStateNames();
         for (CityWithState city : cities) {
             tableModel.addRow(new Object[] {city.getId(), city.getCityName(), city.getStateId(), city.getStateName()});

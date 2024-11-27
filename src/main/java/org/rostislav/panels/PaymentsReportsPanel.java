@@ -18,36 +18,36 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import org.rostislav.controllers.NavigationController;
-import org.rostislav.models.RentalReport;
-import org.rostislav.service.RentalReportService;
+import org.rostislav.models.PaymentReport;
+import org.rostislav.service.PaymentReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RentalReportsPanel extends JPanel implements NavigablePanel {
-    private final RentalReportService rentalReportService;
+public class PaymentsReportsPanel extends JPanel implements NavigablePanel {
+    private final PaymentReportService paymentReportService;
     private final DefaultTableModel tableModel;
 
     @Autowired
-    public RentalReportsPanel(NavigationController navigationController, RentalReportService rentalReportService) {
-        this.rentalReportService = rentalReportService;
+    public PaymentsReportsPanel(NavigationController navigationController, PaymentReportService paymentReportService) {
+        this.paymentReportService = paymentReportService;
 
         setLayout(new BorderLayout());
 
-        JLabel title = new JLabel("Rental Reports", JLabel.CENTER);
+        JLabel title = new JLabel("Payment Reports", JLabel.CENTER);
         title.setFont(new Font("Arial", Font.BOLD, 24));
         add(title, BorderLayout.NORTH);
 
-        String[] columns = {"User", "Car License Plate", "Pickup Date", "Dropoff Date", "Total Price", "Status"};
+        String[] columns = {"User", "Payment Method", "Amount", "Date", "Status"};
         tableModel = new DefaultTableModel(columns, 0);
         JTable table = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
 
-        JPanel filtersPanel = new JPanel(new GridLayout(2, 4, 10, 10));
+        JPanel filtersPanel = new JPanel(new GridLayout(2, 3, 10, 10));
         JTextField userField = new JTextField();
-        JTextField carField = new JTextField();
-        JComboBox<String> statusComboBox = new JComboBox<>(new String[] {"All", "Pending", "InProgress", "Completed", "Cancelled"});
+        JComboBox<String> methodComboBox = new JComboBox<>(new String[] {"All", "Credit Card", "Debit Card", "Cash", "Bank Transfer"});
+        JComboBox<String> statusComboBox = new JComboBox<>(new String[] {"All", "Pending", "Completed", "Refunded"});
         JTextField startDateField = new JTextField("YYYY-MM-DD");
         JTextField endDateField = new JTextField("YYYY-MM-DD");
 
@@ -69,8 +69,8 @@ public class RentalReportsPanel extends JPanel implements NavigablePanel {
 
         filtersPanel.add(new JLabel("User Name:"));
         filtersPanel.add(userField);
-        filtersPanel.add(new JLabel("Car License Plate:"));
-        filtersPanel.add(carField);
+        filtersPanel.add(new JLabel("Payment Method:"));
+        filtersPanel.add(methodComboBox);
         filtersPanel.add(new JLabel("Status:"));
         filtersPanel.add(statusComboBox);
         filtersPanel.add(new JLabel("Start Date:"));
@@ -92,19 +92,19 @@ public class RentalReportsPanel extends JPanel implements NavigablePanel {
 
         generateButton.addActionListener(e -> {
             String userName = userField.getText().trim();
-            String carLicensePlate = carField.getText().trim();
+            String method = methodComboBox.getSelectedItem().toString();
             String status = statusComboBox.getSelectedItem().toString();
             String startDate = startDateField.getText().trim();
             String endDate = endDateField.getText().trim();
 
-            generateReport(userName, carLicensePlate, status, startDate, endDate);
+            generateReport(userName, method, status, startDate, endDate);
         });
     }
 
-    private void generateReport(String userName, String carLicensePlate, String status, String startDate, String endDate) {
+    private void generateReport(String userName, String method, String status, String startDate, String endDate) {
         try {
             userName = userName.isEmpty() ? null : userName;
-            carLicensePlate = carLicensePlate.isEmpty() ? null : carLicensePlate;
+            method = method.equals("All") ? null : method;
             status = status.equals("All") ? null : status;
 
             LocalDate start = null;
@@ -121,7 +121,7 @@ public class RentalReportsPanel extends JPanel implements NavigablePanel {
                 throw new IllegalArgumentException("Start date cannot be after end date.");
             }
 
-            Collection<RentalReport> reports = rentalReportService.getRentalReport(userName, carLicensePlate, status, start, end);
+            Collection<PaymentReport> reports = paymentReportService.getPaymentReport(userName, method, status, start, end);
             loadReportData(reports);
         } catch (
                 DateTimeParseException e) {
@@ -135,15 +135,14 @@ public class RentalReportsPanel extends JPanel implements NavigablePanel {
         }
     }
 
-    private void loadReportData(Collection<RentalReport> reports) {
+    private void loadReportData(Collection<PaymentReport> reports) {
         tableModel.setRowCount(0);
-        for (RentalReport report : reports) {
+        for (PaymentReport report : reports) {
             tableModel.addRow(new Object[] {
                     report.getUserName(),
-                    report.getCarLicensePlate(),
-                    report.getPickupDate(),
-                    report.getDropoffDate(),
-                    report.getTotalPrice(),
+                    report.getPaymentMethod(),
+                    report.getAmount(),
+                    report.getDate(),
                     report.getStatus()
             });
         }
@@ -151,7 +150,7 @@ public class RentalReportsPanel extends JPanel implements NavigablePanel {
 
     @Override
     public String getPanelName() {
-        return "RentalReportsPanel";
+        return "PaymentsReportsPanel";
     }
 
     @Override

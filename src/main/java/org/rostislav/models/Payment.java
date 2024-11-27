@@ -11,6 +11,9 @@ public class Payment {
     private String method;
     private String status;
 
+    public Payment() {
+    }
+
     public Payment(int rentalId, BigDecimal amount, LocalDate date, String method, String status) {
         this.rentalId = rentalId;
         this.amount = amount;

@@ -11,6 +11,7 @@ import org.rostislav.models.Payment;
 
 @Mapper
 public interface PaymentRepository {
+
     @Select("SELECT * FROM payments WHERE id = #{id}")
     Payment getPaymentById(int id);
 

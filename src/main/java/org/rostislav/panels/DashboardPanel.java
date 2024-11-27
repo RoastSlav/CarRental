@@ -54,9 +54,9 @@ public class DashboardPanel extends JPanel implements NavigablePanel {
         }));
 
         categoriesPanel.add(createCategoryPanel("Reports", new String[] {
-                "Rental Reports", "Revenue Reports"
+                "Rental Reports", "Payment Reports"
         }, new String[] {
-                "RentalReportsPanel", "RevenueReportsPanel"
+                "RentalReportsPanel", "PaymentsReportsPanel"
         }));
 
         add(categoriesPanel, BorderLayout.CENTER);

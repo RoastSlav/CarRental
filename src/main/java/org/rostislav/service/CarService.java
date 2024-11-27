@@ -13,7 +13,7 @@ public class CarService {
     private CarRepository carRepository;
 
     public Collection<Car> getAllCars() {
-        return carRepository.getAllCars();  // The repository will provide the car data with location names
+        return carRepository.getAllCars();
     }
 
     public void addCar(Car car) {

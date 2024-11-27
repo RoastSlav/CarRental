@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.Collection;
 
 import org.rostislav.models.Rental;
+import org.rostislav.models.RentalWithNames;
 import org.rostislav.repository.RentalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,8 +27,8 @@ public class RentalService {
         rentalRepository.addRental(rental);
     }
 
-    public void addRental(int userId, int vehicleId, LocalDate startDate, LocalDate endDate, BigDecimal totalPrice, String status) {
-        rentalRepository.addRental(new Rental(userId, vehicleId, startDate, endDate, totalPrice, status));
+    public void addRental(int userId, int carId, LocalDate pickupDate, LocalDate dropoffDate, BigDecimal totalPrice, String status) {
+        rentalRepository.addRental(new Rental(userId, carId, pickupDate, dropoffDate, totalPrice, status));
     }
 
     public void removeRental(int id) {
@@ -38,11 +39,19 @@ public class RentalService {
         rentalRepository.updateRental(rental);
     }
 
-    public void updateRental(int id, int userId, int vehicleId, LocalDate startDate, LocalDate endDate, BigDecimal totalPrice, String status) {
-        rentalRepository.updateRental(new Rental(id, userId, vehicleId, startDate, endDate, totalPrice, status));
+    public void updateRental(int id, int userId, int carId, LocalDate pickupDate, LocalDate dropoffDate, BigDecimal totalPrice, String status) {
+        rentalRepository.updateRental(new Rental(id, userId, carId, pickupDate, dropoffDate, totalPrice, status));
+    }
+
+    public Collection<RentalWithNames> getAllRentalsWithNames() {
+        return rentalRepository.getAllRentalsWithNames();
     }
 
     public void updateRentalStatus(int id, String status) {
         rentalRepository.updateRentalStatus(id, status);
+    }
+
+    public RentalWithNames getRentalWithNames(int rentalId) {
+        return rentalRepository.getRentalWithNames(rentalId);
     }
 }

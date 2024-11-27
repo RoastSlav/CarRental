@@ -5,10 +5,9 @@ public class LocationWithCity {
     private String name;
     private String address;
     private int cityId;
-    private String cityName; // This is crucial for proper mapping
+    private String cityName;
     private String zipCode;
 
-    // Getters and setters
     public int getId() {
         return id;
     }
@@ -42,7 +41,7 @@ public class LocationWithCity {
     }
 
     public String getCityName() {
-        return cityName; // This should map to city_name from the query
+        return cityName;
     }
 
     public void setCityName(String cityName) {

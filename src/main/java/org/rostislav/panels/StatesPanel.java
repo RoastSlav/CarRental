@@ -47,7 +47,7 @@ public class StatesPanel extends JPanel implements NavigablePanel {
         tableModel = new DefaultTableModel(new Object[] {"ID", "State Name"}, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                return column != 0; // ID is not editable
+                return column != 0;
             }
         };
         statesTable = new JTable(tableModel);

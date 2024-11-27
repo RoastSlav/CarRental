@@ -34,14 +34,12 @@ public class RolesPanel extends JPanel implements NavigablePanel {
         title.setFont(new Font("Arial", Font.BOLD, 24));
         add(title, BorderLayout.NORTH);
 
-        // Create a table for displaying roles
         String[] columns = {"ID", "Role Name"};
         tableModel = new DefaultTableModel(columns, 0);
         JTable table = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
 
-        // CRUD buttons panel
         JPanel buttonsPanel = new JPanel();
         JButton addButton = new JButton("Add Role");
         JButton editButton = new JButton("Edit Role");
@@ -54,10 +52,8 @@ public class RolesPanel extends JPanel implements NavigablePanel {
         buttonsPanel.add(backButton);
         add(buttonsPanel, BorderLayout.SOUTH);
 
-        // Load roles into the table
         loadRoles();
 
-        // Button listeners
         addButton.addActionListener(e -> addRole());
         editButton.addActionListener(e -> editRole(table));
         deleteButton.addActionListener(e -> deleteRole(table));
@@ -65,7 +61,7 @@ public class RolesPanel extends JPanel implements NavigablePanel {
     }
 
     private void loadRoles() {
-        tableModel.setRowCount(0); // Clear existing rows
+        tableModel.setRowCount(0);
         Collection<Role> roles = roleService.getAllRoles();
         for (Role role : roles) {
             tableModel.addRow(new Object[] {role.getId(), role.getRoleName()});

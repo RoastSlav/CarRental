@@ -48,14 +48,12 @@ public class CarPanel extends JPanel implements NavigablePanel {
         title.setFont(new Font("Arial", Font.BOLD, 24));
         add(title, BorderLayout.NORTH);
 
-        // Table for displaying cars
         String[] columns = {"ID", "Model", "Year", "Color", "License Plate", "Status", "Location"};
         tableModel = new DefaultTableModel(columns, 0);
         JTable table = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
 
-        // CRUD Buttons
         JPanel buttonsPanel = new JPanel();
         JButton addButton = new JButton("Add Car");
         JButton editButton = new JButton("Edit Car");
@@ -68,10 +66,8 @@ public class CarPanel extends JPanel implements NavigablePanel {
         buttonsPanel.add(backButton);
         add(buttonsPanel, BorderLayout.SOUTH);
 
-        // Load Cars into the table
         loadCars();
 
-        // Button Listeners
         addButton.addActionListener(e -> addCar());
         editButton.addActionListener(e -> editCar(table));
         deleteButton.addActionListener(e -> deleteCar(table));
@@ -79,7 +75,7 @@ public class CarPanel extends JPanel implements NavigablePanel {
     }
 
     private void loadCars() {
-        tableModel.setRowCount(0); // Clear existing rows
+        tableModel.setRowCount(0);
         Collection<Car> cars = carService.getAllCars();
         for (Car car : cars) {
             tableModel.addRow(new Object[] {
@@ -128,7 +124,7 @@ public class CarPanel extends JPanel implements NavigablePanel {
                             status,
                             selectedLocation.getId()
                     );
-                    loadCars(); // Reload the table data
+                    loadCars();
                 } else {
                     JOptionPane.showMessageDialog(this, "Please fill in all fields.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
