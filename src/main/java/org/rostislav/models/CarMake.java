@@ -23,4 +23,9 @@ public class CarMake {
     public void setMakeName(String makeName) {
         this.makeName = makeName;
     }
+
+    @Override
+    public String toString() {
+        return makeName;
+    }
 }

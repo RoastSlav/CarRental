@@ -1,35 +1,26 @@
 package org.rostislav;
 
+import javax.swing.SwingUtilities;
+
 import org.mybatis.spring.annotation.MapperScan;
-import org.rostislav.views.Dashboard;
-import org.springframework.boot.Banner;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.WebApplicationType;
+import org.rostislav.views.MainWindow;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
-import javax.swing.*;
-
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"org.rostislav", "panels"})
 @MapperScan("org.rostislav.repository")
-public class App implements CommandLineRunner {
-    static ApplicationContext context;
+public class App {
 
     public static void main(String[] args) {
-        context = new SpringApplicationBuilder(App.class)
-                .web(WebApplicationType.NONE)
-                .headless(false)
-                .bannerMode(Banner.Mode.OFF)
-                .run(args);
+        System.setProperty("java.awt.headless", "false");
+        // Launch the Spring application context
+        ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
+
+        // Get the MainWindow bean and show it
         SwingUtilities.invokeLater(() -> {
-            Dashboard dashboard = context.getBean(Dashboard.class);
-            dashboard.setVisible(true);
+            MainWindow mainWindow = context.getBean(MainWindow.class);
+            mainWindow.setVisible(true);
         });
-    }
-
-    @Override
-    public void run(String... args) {
-
     }
 }

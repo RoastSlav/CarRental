@@ -4,18 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6899a7-e9ba-4331-8f24-7cf646841922" name="Changes" comment="Added services">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bea02ce96be79f4c71059e3eaddda51411db19d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bea02ce96be79f4c71059e3eaddda51411db19d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6ae212e6427542cdf4adff5cf0b92e45512106b8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6ae212e6427542cdf4adff5cf0b92e45512106b8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e97d4c6a113c8cc1128284ee93e57de4ecca5a6a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e97d4c6a113c8cc1128284ee93e57de4ecca5a6a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    <list default="true" id="1b6899a7-e9ba-4331-8f24-7cf646841922" name="Changes" comment="Started work on the ui">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/controllers/NavigationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CityWithState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/LocationWithCity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/CarColorsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/CarMakesPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/CarModelsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/CarPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/CitiesPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/DashboardPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/LocationsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/NavigablePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/PaymentsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RentalReportsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RentalsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RevenueReportsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RolesPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/StatesPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/UsersPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/CarColorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/CarMakeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/CarModelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/CityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/StateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/AppConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/views/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/views/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/panels/CarsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/panels/CarsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarMake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarMake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/CarModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarColorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarColorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/LocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/views/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/views/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/panels/CarsPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/panels/DashboardPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/panels/LocationsPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/panels/PaymentsPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/panels/RatesPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/panels/RolesPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/panels/UserPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatisconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatisconfig.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +75,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "RoastSlav"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RoastSlav&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/RoastSlav/CarRental.git",
-    "accountId": "0ea574a6-798e-4832-9e97-438eeef869ba"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RoastSlav/CarRental.git&quot;,
+    &quot;accountId&quot;: &quot;0ea574a6-798e-4832-9e97-438eeef869ba&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -56,8 +98,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -96,8 +140,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -121,6 +165,11 @@
       <workItem from="1716387054099" duration="13000" />
       <workItem from="1716664777475" duration="4607000" />
       <workItem from="1716669662139" duration="524000" />
+      <workItem from="1716670192516" duration="457000" />
+      <workItem from="1716670660810" duration="55000" />
+      <workItem from="1732020001628" duration="70000" />
+      <workItem from="1732020141434" duration="7614000" />
+      <workItem from="1732713019448" duration="8270000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -162,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710429154617</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Started work on the ui">
+      <option name="closed" value="true" />
+      <created>1716670506794</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716670506794</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +242,10 @@
     <MESSAGE value="Added the panels for the interface and the models" />
     <MESSAGE value="Added repositories for the tables and a missing model" />
     <MESSAGE value="Added services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added services" />
+    <MESSAGE value="Started work on the ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started work on the ui" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

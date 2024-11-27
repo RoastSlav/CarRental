@@ -5,6 +5,9 @@ public class CarModel {
     private String modelName;
     private int makeId;
 
+    public CarModel() {
+    }
+
     public CarModel(String modelName, int makeId) {
         this.modelName = modelName;
         this.makeId = makeId;
@@ -32,5 +35,10 @@ public class CarModel {
 
     public void setMakeId(int makeId) {
         this.makeId = makeId;
+    }
+
+    @Override
+    public String toString() {
+        return modelName;
     }
 }

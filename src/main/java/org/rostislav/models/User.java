@@ -2,13 +2,18 @@ package org.rostislav.models;
 
 public class User {
     private int id;
+    private String fullName;
     private String email;
     private String password;
     private String phone;
     private String licenseNumber;
     private int roleId;
 
-    public User(String email, String password, String phone, String licenseNumber, int roleId) {
+    public User() {
+    }
+
+    public User(String fullName, String email, String password, String phone, String licenseNumber, int roleId) {
+        this.fullName = fullName;
         this.email = email;
         this.password = password;
         this.phone = phone;
@@ -62,5 +67,13 @@ public class User {
 
     public void setRoleId(int roleId) {
         this.roleId = roleId;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 }

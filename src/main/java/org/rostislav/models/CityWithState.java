@@ -1,17 +1,10 @@
 package org.rostislav.models;
 
-public class City {
+public class CityWithState {
     private int id;
     private String cityName;
     private int stateId;
-
-    public City() {
-    }
-
-    public City(String cityName, int stateId) {
-        this.cityName = cityName;
-        this.stateId = stateId;
-    }
+    private String stateName;
 
     public int getId() {
         return id;
@@ -37,8 +30,11 @@ public class City {
         this.stateId = stateId;
     }
 
-    @Override
-    public String toString() {
-        return cityName;
+    public String getStateName() {
+        return stateName;
+    }
+
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
     }
 }

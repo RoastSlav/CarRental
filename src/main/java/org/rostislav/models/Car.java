@@ -3,11 +3,14 @@ package org.rostislav.models;
 public class Car {
     private int id;
     private int modelId;
+    private String modelName;
     private int year;
     private int colorId;
+    private String colorName;
     private String licensePlate;
     private String status;
     private int locationId;
+    private String locationName;
 
     public Car() {
     }
@@ -77,8 +80,32 @@ public class Car {
         this.locationId = locationId;
     }
 
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    public String getColorName() {
+        return colorName;
+    }
+
+    public void setColorName(String colorName) {
+        this.colorName = colorName;
+    }
+
+    public String getLocationName() {
+        return locationName;
+    }
+
+    public void setLocationName(String locationName) {
+        this.locationName = locationName;
+    }
+
     @Override
     public String toString() {
-        return id + " - " + licensePlate + " - " + status;
+        return licensePlate;
     }
 }

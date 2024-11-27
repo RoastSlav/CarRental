@@ -1,22 +1,14 @@
 package org.rostislav.models;
 
-public class Location {
+public class LocationWithCity {
     private int id;
     private String name;
     private String address;
     private int cityId;
+    private String cityName; // This is crucial for proper mapping
     private String zipCode;
 
-    public Location() {
-    }
-
-    public Location(String name, String address, int cityId, String zipCode) {
-        this.name = name;
-        this.address = address;
-        this.cityId = cityId;
-        this.zipCode = zipCode;
-    }
-
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -49,16 +41,19 @@ public class Location {
         this.cityId = cityId;
     }
 
+    public String getCityName() {
+        return cityName; // This should map to city_name from the query
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
     public String getZipCode() {
         return zipCode;
     }
 
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
-    }
-
-    @Override
-    public String toString() {
-        return name;
     }
 }
