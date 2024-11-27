@@ -1,15 +1,15 @@
 package org.rostislav.service;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.Collection;
+
 import org.rostislav.models.Payment;
 import org.rostislav.models.Rate;
 import org.rostislav.repository.PaymentRepository;
 import org.rostislav.repository.RateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.Collection;
 
 @Service
 public class PaymentService {

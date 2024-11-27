@@ -1,13 +1,13 @@
 package org.rostislav.service;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.Collection;
+
 import org.rostislav.models.Rental;
 import org.rostislav.repository.RentalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.Collection;
 
 @Service
 public class RentalService {

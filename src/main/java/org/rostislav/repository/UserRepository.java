@@ -1,9 +1,13 @@
 package org.rostislav.repository;
 
-import org.apache.ibatis.annotations.*;
-import org.rostislav.models.User;
-
 import java.util.Collection;
+
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+import org.rostislav.models.User;
 
 @Mapper
 public interface UserRepository {
