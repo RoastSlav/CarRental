@@ -33,9 +33,6 @@ public interface RentalRepository {
     @Delete("DELETE FROM rentals WHERE id = #{id}")
     void deleteRental(int id);
 
-    @Update("UPDATE rentals SET status=#{status} WHERE id=#{id}")
-    void updateRentalStatus(int id, String status);
-
     @Select("SELECT r.id, u.full_name AS userName, c.license_plate AS carLicensePlate, r.pickup_date AS pickupDate, r.dropoff_date AS dropoffDate, r.total_price AS totalPrice, r.status " +
             "FROM rentals r " +
             "JOIN users u ON r.user_id = u.id " +

@@ -14,12 +14,6 @@ import org.rostislav.models.CityWithState;
 
 @Mapper
 public interface CityRepository {
-    @Select("SELECT * FROM cities WHERE id = #{id}")
-    City getCityById(int id);
-
-    @Select("SELECT id, city_name AS cityName, state_id AS stateId FROM cities")
-    Collection<City> getAllCities();
-
     @Insert("INSERT INTO cities (city_name, state_id) VALUES (#{cityName}, #{stateId})")
     void addCity(City city);
 

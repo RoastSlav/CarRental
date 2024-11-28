@@ -11,9 +11,6 @@ import org.rostislav.models.CarModel;
 
 @Mapper
 public interface CarModelRepository {
-    @Select("SELECT * FROM car_models WHERE id = #{id}")
-    CarModel getCarModelById(int id);
-
     @Select("SELECT * FROM car_models")
     Collection<CarModel> getAllCarModels();
 

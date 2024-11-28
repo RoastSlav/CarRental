@@ -11,9 +11,6 @@ import org.rostislav.models.State;
 
 @Mapper
 public interface StateRepository {
-    @Select("SELECT * FROM states WHERE id = #{id}")
-    State getStateById(int id);
-
     @Select("SELECT * FROM states")
     Collection<State> getAllStates();
 

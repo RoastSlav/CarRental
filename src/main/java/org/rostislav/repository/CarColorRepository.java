@@ -11,9 +11,6 @@ import org.rostislav.models.CarColor;
 
 @Mapper
 public interface CarColorRepository {
-    @Select("SELECT * FROM car_colors WHERE id = #{id}")
-    CarColor getColorById(int id);
-
     @Select("SELECT * FROM car_colors")
     Collection<CarColor> getAllColors();
 
