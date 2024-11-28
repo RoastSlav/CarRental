@@ -23,10 +23,6 @@ public class RentalService {
         return rentalRepository.getAllRentals();
     }
 
-    public void addRental(Rental rental) {
-        rentalRepository.addRental(rental);
-    }
-
     public void addRental(int userId, int carId, LocalDate pickupDate, LocalDate dropoffDate, BigDecimal totalPrice, String status) {
         rentalRepository.addRental(new Rental(userId, carId, pickupDate, dropoffDate, totalPrice, status));
     }
@@ -39,16 +35,8 @@ public class RentalService {
         rentalRepository.updateRental(rental);
     }
 
-    public void updateRental(int id, int userId, int carId, LocalDate pickupDate, LocalDate dropoffDate, BigDecimal totalPrice, String status) {
-        rentalRepository.updateRental(new Rental(id, userId, carId, pickupDate, dropoffDate, totalPrice, status));
-    }
-
     public Collection<RentalWithNames> getAllRentalsWithNames() {
         return rentalRepository.getAllRentalsWithNames();
-    }
-
-    public void updateRentalStatus(int id, String status) {
-        rentalRepository.updateRentalStatus(id, status);
     }
 
     public RentalWithNames getRentalWithNames(int rentalId) {

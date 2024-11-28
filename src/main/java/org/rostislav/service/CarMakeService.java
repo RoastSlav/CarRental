@@ -17,10 +17,6 @@ public class CarMakeService {
         this.carMakeRepository = carMakeRepository;
     }
 
-    public CarMake getCarMakeById(int id) {
-        return carMakeRepository.getCarMakeById(id);
-    }
-
     public Collection<CarMake> getAllCarMakes() {
         return carMakeRepository.getAllCarMakes();
     }

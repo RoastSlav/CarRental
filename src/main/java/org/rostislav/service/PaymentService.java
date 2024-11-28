@@ -15,10 +15,6 @@ public class PaymentService {
     @Autowired
     private PaymentRepository paymentRepository;
 
-    public void addPayment(Payment payment) {
-        paymentRepository.addPayment(payment);
-    }
-
     public void addPayment(int rentalId, BigDecimal amount, LocalDate date, String method, String status) {
         paymentRepository.addPayment(new Payment(rentalId, amount, date, method, status));
     }

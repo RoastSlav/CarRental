@@ -17,10 +17,6 @@ public class CarColorService {
         this.carColorRepository = carColorRepository;
     }
 
-    public CarColor getColorById(int id) {
-        return carColorRepository.getColorById(id);
-    }
-
     public Collection<CarColor> getAllColors() {
         return carColorRepository.getAllColors();
     }

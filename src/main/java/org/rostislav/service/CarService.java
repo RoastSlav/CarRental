@@ -16,10 +16,6 @@ public class CarService {
         return carRepository.getAllCars();
     }
 
-    public void addCar(Car car) {
-        carRepository.addCar(car);
-    }
-
     public void updateCar(Car car) {
         carRepository.updateCar(car);
     }

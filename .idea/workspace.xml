@@ -4,29 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6899a7-e9ba-4331-8f24-7cf646841922" name="Changes" comment="reformat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/PaymentReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/RentalReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/RentalWithNames.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/PaymentReportRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/RentalReportRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/PaymentReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/RentalReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/sqlProviders/PaymentReportProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/sqlProviders/RentalReportSqlProvider.java" afterDir="false" />
+    <list default="true" id="1b6899a7-e9ba-4331-8f24-7cf646841922" name="Changes" comment="added reports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/DashboardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/DashboardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/PaymentsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/PaymentsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RentalReportsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RentalReportsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RentalsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RentalsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/RevenueReportsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/panels/PaymentsReportsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/PaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/RentalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/repository/RentalRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rostislav/service/RentalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rostislav/service/RentalService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +127,7 @@
       <workItem from="1716670660810" duration="55000" />
       <workItem from="1732020001628" duration="70000" />
       <workItem from="1732020141434" duration="7614000" />
-      <workItem from="1732713019448" duration="16249000" />
+      <workItem from="1732713019448" duration="18374000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -214,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732722681797</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added reports">
+      <option name="closed" value="true" />
+      <created>1732734639005</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732734639005</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +227,8 @@
     <MESSAGE value="Started work on the ui" />
     <MESSAGE value="Too much stuff to write, but it's mostly now functional" />
     <MESSAGE value="reformat" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformat" />
+    <MESSAGE value="added reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="added reports" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

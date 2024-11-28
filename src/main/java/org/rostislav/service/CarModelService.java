@@ -17,10 +17,6 @@ public class CarModelService {
         this.carModelRepository = carModelRepository;
     }
 
-    public CarModel getCarModelById(int id) {
-        return carModelRepository.getCarModelById(id);
-    }
-
     public Collection<CarModel> getAllCarModels() {
         return carModelRepository.getAllCarModels();
     }
